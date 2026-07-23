@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://videos.pexels.com/video-files/8519887/8519887-uhd_2732_1122_25fps.mp4" type="video/mp4">
+    </video>
+    <header>
+        <nav>
+            <div class="logo">Sneaker<span>Spot</span></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+        </nav>
+    </header>
+    
+    <form id="regForm">
+        <h2>Sign up For Sneaker Spot</h2>
+        <input id="name" type="text" placeholder=" Name" required>
+        <input id="mail" type="email" placeholder="Email Address" required>
+        <input id="pswrd" type="password" placeholder="Password" required>
+        <input id="cnfrm" type="password" placeholder="Confirm Password" required>
+        <button type="submit">Sign up</button>
+        <p id="message"></p>
+        <p>Already a customer?<a href="login.html">Login</a></p>
+        
+    </form>
+
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let mail = document.getElementById('mail').value;
+            let pswrd = document.getElementById('pswrd').value;
+            let cnfrm = document.getElementById('cnfrm').value;
+
+            if (pswrd !== cnfrm) {
+                document.getElementById('message').textContent = "Passwords do not match!";
+                document.getElementById('message').style.color = "red";
+                return;
+            }
+
+            document.getElementById('message').textContent = "Registration successful!";
+            document.getElementById('message').style.color = "green";
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Sneaker Spot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

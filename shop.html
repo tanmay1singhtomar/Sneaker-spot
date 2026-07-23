@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sneaker Spot</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://videos.pexels.com/video-files/4380323/4380323-hd_1080_1920_30fps.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <nav>
+            <div class="logo">Sneaker<span>Spot</span></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shop Our Collection</h1>
+            <p>Discover the latest trends in branded footwear.</p>
+        </div>
+    </section>
+
+
+    <section class="shop-container">
+
+        <aside class="filters">
+            <h3>Filter by:</h3>
+
+            <label>Brand:</label>
+            <select id="brandFilter">
+                <option value="All">All</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Skechers">Skechers</option>
+                <option value="Crocs">Crocs</option>
+                <option value="Puma">Puma</option>
+                <option value="Reebok">Reebok</option>
+                <option value="Jordan">Jordan</option>
+            </select>
+
+            <label>Price Range:</label>
+            <input type="range" id="priceFilter" min="5000" max="20000" value="20000">
+
+            <p id="priceValue">Up to ₹20,000</p>
+
+            <button id="applyFilters">Apply Filters</button>
+        </aside>
+
+
+
+        <div class="product-grid">
+            <div class="product" data-brand="Nike" data-price="10425">
+                <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/a7f07bf7-7896-48c7-b53d-ab5daf86f84e/NIKE+AIR+MAX+EXCEE.png"
+                    alt="Nike Air Max">
+                <h3>Nike Air Max</h3>
+                <p>₹10,425</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" data-brand="Adidas" data-price="13032">
+                <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bad84b99019d4386a67cd03ecc51c0a4_9366/ULTRABOOST_1.0_SHOES_Black_HQ4201_HM1.jpg"
+                    alt="Adidas Ultraboost">
+                <h3>Adidas Ultraboost</h3>
+                <p>₹13,032</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" data-brand="Puma" data-price="9558">
+                <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/369449/02/sv01/fnd/IND/fmt/png/RS-X-Toys-Unisex-Sneakers"
+                    alt="Puma RS-X">
+                <h3>Puma RS-X</h3>
+                <p>₹9,558</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product" data-brand="Jordan" data-price="15499">
+                <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/316de1b6-f526-4f5c-8683-af5420a20680/AIR+JORDAN+4+RETRO.png"
+                    alt="Jordan Retro">
+                <h3>Jordan Retro</h3>
+                <p>₹15,499</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("priceFilter").addEventListener("input", function () {
+                document.getElementById("priceValue").textContent = "Up to ₹" + this.value;
+            });
+
+            document.getElementById("applyFilters").addEventListener("click", function () {
+                let selectedBrand = document.getElementById("brandFilter").value;
+                let selectedPrice = parseInt(document.getElementById("priceFilter").value);
+
+                let products = document.querySelectorAll(".product");
+
+                products.forEach(product => {
+                    let brand = product.getAttribute("data-brand");
+                    let price = parseInt(product.getAttribute("data-price"));
+
+                    let brandMatch = (selectedBrand === "All" || selectedBrand === brand);
+                    let priceMatch = (price <= selectedPrice);
+
+                    if (brandMatch && priceMatch) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        </script>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sneaker Spot. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

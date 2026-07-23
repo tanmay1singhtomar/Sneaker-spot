@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | SneakeSpot</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://videos.pexels.com/video-files/7287317/7287317-uhd_1440_2560_25fps.mp4" type="video/mp4">
+    </video>
+    <header>
+        <nav>
+            <div class="logo">Sneaker<span>Spot</span></div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="cart-container">
+        <section class="cart-items">
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-item">
+                <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/369449/02/sv01/fnd/IND/fmt/png/RS-X-Toys-Unisex-Sneakers" alt="Puma RS-X">
+                <div class="item-details">
+                    <h3>Puma RS-X</h3>
+                    <p>Price: <strong>₹9,558</strong></p>
+                    <label>Quantity: </label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+        </section>
+        
+        <aside class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal (1 item): <strong>₹9,558</strong></p>
+            <button class="checkout">Proceed to Checkout</button>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Sneaker Spot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

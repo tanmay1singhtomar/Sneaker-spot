@@ -1,0 +1,161 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #b21414;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b21414;
+}
+
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px auto;
+    width: 80%;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    flex: 3;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.cart-item img {
+    width: 140px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.item-details p {
+    font-size: 16px;
+    color: #333;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.remove {
+    background: none;
+    border: none;
+    color: #b21414;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.remove:hover {
+    color: #5d0909;
+}
+
+.order-summary {
+    flex: 1;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.checkout {
+    width: 100%;
+    padding: 12px;
+    background: #b21414;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.checkout:hover {
+    background: #5d0909;
+}
+
+footer {
+    background: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}

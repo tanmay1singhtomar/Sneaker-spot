@@ -1,0 +1,122 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://files.oaiusercontent.com/file-Kt2U5WEw3E3tqEbHDbPRoc?se=2025-02-27T09%3A32%3A52Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D35b0f68d-7b63-4abd-b344-69b0370bbac7.webp&sig=ePGO59fVd8apdw3gPNuRHQPpUmBkVzl7WKHuu0Zr%2BnE%3D') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+   
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b21414;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #5d0909;
+}
+
+
+.about {
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.about-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #b21414;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #b21414;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.about-content ul li i {
+    color: #f6f1f1;
+    margin-right: 10px;
+}
+
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
